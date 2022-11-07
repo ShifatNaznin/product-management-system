@@ -39,9 +39,11 @@ Route::group(['prefix' => 'products'], function() {
 });
 // for category
 Route::group(['prefix' => 'category'], function() {
-    Route::get('/category', [CategoryController::class,'category']);
+    Route::get('/category', [CategoryController::class,'index']);
+    Route::post('/store', [CategoryController::class,'store']);
 });
 // for color
 Route::group(['prefix' => 'color'], function() {
-    Route::get('/color', [ColorController::class,'color']);
+    Route::get('/color', [ColorController::class,'index']);
+    Route::post('/store', [ColorController::class,'store']);
 });

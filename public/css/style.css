@@ -1,3 +1,14 @@
+.text-center img{
+  height: 50px;
+}
+.form-group-check-box {
+  margin: 8px 0px 0px 18px;
+}
+.form-group label {
+  display: inline-block;
+  position: relative;
+  padding-left: 8px;
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));

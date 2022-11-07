@@ -2,7 +2,7 @@
   <div class="card">
     <div class="card-body">
       <div class="d-flex justify-content-between pb-2 mb-2">
-        <h5 class="card-title">Update Post Data</h5>
+        <h5 class="card-title">Update Product Data</h5>
         <div>
           <router-link :to="{ name: 'products' }" class="btn btn-success"
             >Go Back</router-link

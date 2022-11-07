@@ -11,6 +11,10 @@ import Products from '../components/Products';
 import EditProduct from '../components/EditProduct';
 import SingleProduct from '../components/SingleProduct';
 import AddProduct from '../components/AddProduct';
+import Category from '../components/Category';
+import AddCategory from '../components/AddCategory';
+import Color from '../components/Color';
+import AddColor from '../components/AddColor';
 
 export const routes = [{
         name: 'home',
@@ -51,6 +55,26 @@ export const routes = [{
         name: 'editproduct',
         path: '/products/edit/:id',
         component: EditProduct
+    },
+    {
+        name: 'category',
+        path: '/category',
+        component: Category
+    },
+    {
+        name: 'addcategory',
+        path: '/category/create',
+        component: AddCategory
+    },
+    {
+        name: 'color',
+        path: '/color',
+        component: Color
+    },
+    {
+        name: 'addcolor',
+        path: '/color/create',
+        component: AddColor
     }
 ];
 

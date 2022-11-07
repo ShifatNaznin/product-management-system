@@ -15,9 +15,9 @@
               >৳ {{ post.price }}</router-link
             >
           </p>
-          <p>
+          <!-- <p>
             {{ post.description	 }}
-          </p>
+          </p> -->
           <router-link
             class="btn btn-primary btn-block"
             :to="{ name: 'singleproduct', params: { slug: post.slug } }"

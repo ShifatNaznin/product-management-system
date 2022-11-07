@@ -4,6 +4,8 @@
             <div class="navbar-nav" v-if="isLoggedIn">
                 <router-link to="/dashboard" class="nav-item nav-link">Dashboard</router-link>
                 <router-link to="/products" class="nav-item nav-link">Products</router-link>
+                <router-link to="/category" class="nav-item nav-link">Categoy</router-link>
+                <router-link to="/color" class="nav-item nav-link">Color</router-link>
                 <a class="nav-item nav-link" style="cursor: pointer;" @click="logout">Logout</a>
             </div>
             <div class="navbar-nav" v-else>

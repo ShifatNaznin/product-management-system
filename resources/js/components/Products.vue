@@ -9,7 +9,7 @@
             type="button"
             @click="this.$router.push('/products/create')"
           >
-            New Post
+            New Product
           </button>
         </div>
       </div>

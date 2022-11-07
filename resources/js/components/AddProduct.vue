@@ -60,7 +60,11 @@
 
         <div class="form-group mb-2">
           <label>Select Category</label><span class="text-danger"> *</span>
-          <div class="form-group mb-2" v-for="category in categoryList" :key="category.id">
+          <div
+            class="form-group form-group-check-box mb-2"
+            v-for="category in categoryList"
+            :key="category.id"
+          >
             <input
               type="checkbox"
               v-model="categoryId"
@@ -71,8 +75,13 @@
         </div>
         <div class="form-group mb-2">
           <label>Select Color</label><span class="text-danger"> *</span>
-          <div class="form-group mb-2" v-for="color in colorList" :key="color.id">
+          <div
+            class="form-group mb-2"
+            v-for="color in colorList"
+            :key="color.id"
+          >
             <input
+              class="form-group-check-box"
               type="checkbox"
               v-model="colorId"
               v-bind:value="color.id"
@@ -80,16 +89,20 @@
             <label> {{ color.colorName }}</label>
           </div>
         </div>
-       <div class="form-group mb-2">
+        <div class="form-group mb-2">
           <label>Description</label><span class="text-danger"> *</span>
-       
-          <textarea type="text"
+
+          <textarea
+            type="text"
             class="form-control"
-            v-model="description" cols="20" rows="5">
+            v-model="description"
+            cols="20"
+            rows="5"
+          >
           </textarea>
         </div>
 
-       <div class="form-gorup mb-2">
+        <div class="form-gorup mb-2">
           <label>Imagee</label><span class="text-danger"> *</span>
           <input
             id="upload-file"
@@ -127,7 +140,8 @@ export default {
   },
   created() {
     this.$axios.get("/sanctum/csrf-cookie").then((response) => {
-      this.$axios.get("/api/category/category")
+      this.$axios
+        .get("/api/category/category")
         .then((response) => {
           console.log(response.data);
           this.categoryList = response.data;
@@ -135,7 +149,8 @@ export default {
         .catch(function (error) {
           console.log(error);
         });
-        this.$axios.get("/api/color/color")
+      this.$axios
+        .get("/api/color/color")
         .then((response) => {
           console.log(response.data);
           this.colorList = response.data;

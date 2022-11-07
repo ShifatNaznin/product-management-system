@@ -28,8 +28,11 @@ class ProductController extends Controller
         $request->validate([
             'name' => 'required',
             'categoryId' => 'required',
+            'colorId' => 'required',
+            'price' => 'required',
+            'description' => 'required',
             'file' => 'required',
-            'file.*' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'file.*' => 'required|image',
         ]);
         $data = $request->all();
         $images = array();

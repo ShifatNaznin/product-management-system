@@ -183,6 +183,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         App\Repositories\User\UserRepoServiceProvider::class,
         App\Repositories\Product\ProductRepoServiceProvider::class,
+        App\Repositories\Category\CategoryRepoServiceProvider::class,
+        App\Repositories\Color\ColorRepoServiceProvider::class,
 
         /*
          * Package Service Providers...
